@@ -4,8 +4,10 @@ def bfs(graph, start, visited):
     queue = deque([start])
     visited[start] = True
     while queue:
+        #큐에서 하나의 원소를 뽑아 출력
         v = queue.popleft()
         print(v, end=' ')
+        #방문하지 않은 인접한 원소들을 큐에 삽입
         for i in graph[v]:
             print(v)
             if not visited[i]:
